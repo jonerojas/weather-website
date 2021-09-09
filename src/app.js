@@ -5,6 +5,8 @@ const forecast = require('./utilities.js/forecast');
 const geocode = require('./utilities.js/geocode');
 
 const app = express();
+const PORT = process.env.PORT || 3000;
+
 const publicDirectoryRoute = path.join(__dirname, '../public');
 
 //Path to the templates folder holding all hbs files
@@ -107,7 +109,7 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Port started on 3000');
 });
 
