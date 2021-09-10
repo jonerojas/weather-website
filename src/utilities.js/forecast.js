@@ -8,7 +8,7 @@ const forecast = (lat, long, callback) => {
     long;
   request({ url, json: true }, (error, { body }) => {
     if (error) {
-      callback('Unable to get coordinates from coordinates', undefined);
+      callback('Unable to get coordinates from coordinates.', undefined);
     } else if (body.error) {
       console.log(body.error);
       callback('No city found', undefined);
