@@ -9,7 +9,7 @@ const geocode = (address, callback) => {
     if (error) {
       callback('Unable to connect to location services!', undefined);
     } else if (body.features.length === 0) {
-      callback('No such city found. Please try aanother search.', undefined);
+      callback('No such city found. Please try another search.', undefined);
     } else {
       callback(undefined, {
         location: body.features[0].place_name,
